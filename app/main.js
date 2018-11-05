@@ -7,6 +7,9 @@ import * as Settings from 'tns-core-modules/application-settings';
 import {
   PreviousNextView
 } from 'nativescript-iqkeyboardmanager';
+import {
+  MapboxView
+} from 'nativescript-mapbox';
 import App from './App';
 
 if (isIOS) {
@@ -36,6 +39,7 @@ Vue.mixin({
 });
 
 Vue.registerElement('PreviousNextView', () => PreviousNextView);
+Vue.registerElement('Mapbox', () => MapboxView);
 
 new Vue({
   render: h => h('frame', [h(App)])
