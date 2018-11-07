@@ -14,14 +14,12 @@
 </template>
 
 <script>
-  import LoginView from '@/views/auth/login-view';
-
   export default {
     name: 'HomeTabView',
     methods: {
       onTaped() {
         this.remove('logged_in');
-        this.$navigateTo(LoginView, {
+        this.$navigateTo(this.$routes.LoginView, {
           clearHistory: true,
         });
       },

@@ -73,7 +73,6 @@
 </template>
 
 <script>
-    import Tabs from '@/views/layout/tabs';
     import LabelTextField from '@/components/label-text-field';
 
     // TODO update user service stub
@@ -125,7 +124,7 @@
           this.set('email', this.user.email);
           this.set('password', this.user.password);
           this.set('logged_in', true);
-          this.$navigateTo(Tabs, {
+          this.$navigateTo(this.$routes.Tabs, {
             clearHistory: true
           });
         }).catch((error) => {
